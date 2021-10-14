@@ -51,12 +51,23 @@ reset.addEventListener('click', function () {
 //Assegnare al bottone ROLL DICE una formula Math.random a elemento User e elemento PC
 const diceRoll = document.getElementById("roll_btn");
 diceRoll.addEventListener('click', function () {
-    document.getElementById("user_number").innerHTML = `User rolls:` +
-        (Math.floor(Math.random() * 6) + 1);
-    document.getElementById("pc_number").innerHTML = `PC rolls:` +
+
+    const userRoll = document.getElementById("user_number").innerHTML =
         (Math.floor(Math.random() * 6) + 1);
 
+    const pcRoll = document.getElementById("pc_number").innerHTML =
+        (Math.floor(Math.random() * 6) + 1);
+
+    //Far confrontare i due valori
+    //Se User > di PC mostrare CONGRATULATIONS YOU WIN!
+    //Se PC > User mostrare YOU LOST...
+
+    if (userRoll > pcRoll) {
+        document.getElementById('result').innerHTML = 'CONRATULATIONS YOU WIN!!'
+
+    } else if (userRoll < pcRoll) {
+        document.getElementById('result').innerHTML = 'PC WINS....'
+
+    }
+
 })
-//Far confrontare i due valori
-//Se User > di PC mostrare CONGRATULATIONS YOU WIN!
-//Se PC > User mostrare YOU LOST...

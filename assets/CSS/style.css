@@ -40,11 +40,17 @@ label{
     font-size: 4rem;
 }
 
+.roll{
+    text-align: center;
+    padding-top: 2rem;
+}
+
 #user_number{
     width: 50px;
     height: 50px;
     color: rgb(255, 142, 101);
     font-size: 2rem;
+    margin: 2rem
 }
 
 #pc_number{
@@ -52,4 +58,16 @@ label{
     height: 50px;
     color: rgb(136, 237, 255);
     font-size: 2rem;
+    margin: 2rem
+}
+.roll{
+    color: rgba(255, 255, 255, 0.932);
+}
+
+#result{
+    text-align: center;
+}
+
+#result{
+    color: yellow;
 }
