@@ -9,8 +9,11 @@ Array
 
 */
 //Elementi da utilizzare
-const login = document.getElementById("login_btn")
-
+const emailForm = document.querySelector(".login_container")
+const login = document.getElementById("login_btn");
+const reset = document.getElementById("reset");
+const granted = `<h1 class="text_light success">ACCESS GRANTED</h1>`;
+const denied = `<h1 class="text_red fail">ACCESS DENIED</h1>`;
 
 //Generare un array di email
 const emails = [
@@ -25,13 +28,19 @@ const emails = [
 //Assegnare al bottone login un eventListener
 
 login.addEventListener('click', function () {
-    const userEmail = document.getElementById("email").value
-    const access = emails.includes(userEmail)
-    access ? alert("ACCESS GRANTED") : alert("ACCESS DENIED")
+    let userEmail = document.getElementById("email").value
+    const access = emails.includes(userEmail);
+    access ? emailForm.insertAdjacentHTML("beforebegin", granted) : emailForm.insertAdjacentHTML("beforebegin", denied)
 
 
 })
 
+
+reset.addEventListener('click', function () {
+    const result = document.querySelector('h1');
+    result.remove();
+
+})
 
 //Far confrontare email input dalle email del array
 //Se non e uguale, far uscire un Alert che l'email e invalido
