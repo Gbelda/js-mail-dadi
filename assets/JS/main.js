@@ -9,7 +9,8 @@ Array
 
 */
 //Elementi da utilizzare
-var login = document.getElementById("login_btn")
+const login = document.getElementById("login_btn")
+
 
 //Generare un array di email
 const emails = [
@@ -25,13 +26,10 @@ const emails = [
 
 login.addEventListener('click', function () {
     const userEmail = document.getElementById("email").value
-    const accessOk = emails.includes(userEmail.tolowercase)
+    const access = emails.includes(userEmail)
+    access ? alert("ACCESS GRANTED") : alert("ACCESS DENIED")
 
-    if (accessOk == true) {
-        alert("access ok")
-    } else {
-        alert("access denied")
-    }
+
 })
 
 
