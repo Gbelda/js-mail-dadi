@@ -8,12 +8,8 @@ eventListener
 Array
 
 */
-
-
-//Generare gli elementi da utilizzare
-
-
-//console.log(userEmail);
+//Elementi da utilizzare
+var login = document.getElementById("login_btn")
 
 //Generare un array di email
 const emails = [
@@ -24,15 +20,21 @@ const emails = [
     'boolean5@gmail.com',
 ]
 
-var login = document.getElementById("login_btn")
+
+//Assegnare al bottone login un eventListener
 
 login.addEventListener('click', function () {
     const userEmail = document.getElementById("email").value
-    console.log(userEmail);
+    const accessOk = emails.includes(userEmail.tolowercase)
+
+    if (accessOk == true) {
+        alert("access ok")
+    } else {
+        alert("access denied")
+    }
 })
 
 
-//Assegnare al bottone login un eventListener
 //Far confrontare email input dalle email del array
 //Se non e uguale, far uscire un Alert che l'email e invalido
 //Se e uguale ad uno delle email del array allora far accedere al gioco
