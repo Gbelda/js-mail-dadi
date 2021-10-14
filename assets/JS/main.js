@@ -41,12 +41,14 @@ login.addEventListener('click', function () {
 
 })
 
-
 reset.addEventListener('click', function () {
     const result = document.querySelector('h1');
     result.remove();
 
 })
+
+//**************************************DICE ROLL*******************************/
+
 
 //Assegnare al bottone ROLL DICE una formula Math.random a elemento User e elemento PC
 const diceRoll = document.getElementById("roll_btn");
