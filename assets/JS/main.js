@@ -10,8 +10,10 @@ Array
 */
 
 
-
 //Generare gli elementi da utilizzare
+
+
+//console.log(userEmail);
 
 //Generare un array di email
 const emails = [
@@ -22,11 +24,12 @@ const emails = [
     'boolean5@gmail.com',
 ]
 
-for (let n = 0; n < emails.length; n++) {
-    const userEmail = emails[n];
-    console.log(userEmail);
-}
+var login = document.getElementById("login_btn")
 
+login.addEventListener('click', function () {
+    const userEmail = document.getElementById("email").value
+    console.log(userEmail);
+})
 
 
 //Assegnare al bottone login un eventListener
