@@ -18,11 +18,11 @@ const denied = `<h1 class="text_red fail">ACCESS DENIED</h1>`;
 
 //Generare un array di email
 const emails = [
-    'boolean1@gmail.com',
-    'boolean2@gmail.com',
-    'boolean3@gmail.com',
-    'boolean4@gmail.com',
-    'boolean5@gmail.com',
+    'lorem@gmail.com',
+    'ipsum@gmail.com',
+    'dolor@gmail.com',
+    'sit@gmail.com',
+    'amet@gmail.com',
 ]
 
 
@@ -65,11 +65,15 @@ diceRoll.addEventListener('click', function () {
     //Se PC > User mostrare YOU LOST...
 
     if (userRoll > pcRoll) {
-        document.getElementById('result').innerHTML = 'CONRATULATIONS YOU WIN!!'
+        document.getElementById('result').innerHTML = 'CONRATULATIONS YOU WIN!!';
 
     } else if (userRoll < pcRoll) {
-        document.getElementById('result').innerHTML = 'PC WINS....'
+        document.getElementById('result').innerHTML = 'PC WINS....';
+
+    } else {
+        document.getElementById('result').innerHTML = 'TIE GAME ROLL AGAIN';
 
     }
+
 
 })
